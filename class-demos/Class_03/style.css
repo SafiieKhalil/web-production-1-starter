@@ -1,0 +1,62 @@
+/* this is a comment in CSS */
+/* this is how to take notes in code*/
+
+/* 
+CSS follows this structure:
+selector {
+	property:value;
+} 
+*/
+Body{
+	background-color: lightskyblue;
+	/*any changes that will be universal should go in body*/
+	font-family: monospace;
+}
+p{  
+	background-color:purple ;
+	font-size: 24pt;
+	/*color is text color*/
+	color: white;
+/* adjust the width so backround only covers text */
+	width: fit-content;
+ }
+ .notification{ 
+         border:6px solid lavender;
+         margin-bottom: 20px;
+  }
+
+/* being more specific about which div*/
+/*because CCS prioritizes higher specificity*/
+/* this will override the previous styling*/
+/* */ 
+  .notification.warning {
+  	border-color: lightpink;
+  	background-color: white;
+  }
+
+  
+  	#lavander{  
+         background-color: lavender;
+         color:indigo ;
+         margin-top: 50 px;
+      
+  	}
+  	.highlight {
+  		background-color: lightyellow;
+  	}
+
+  	#first{
+  		background-color: lightcyan;
+  	}
+
+  	.lightcoral{
+  		background-color: lightcoral;
+  	}
+  	.lavenderblush{
+  		background-color: lavenderblush;
+  	}
+ /* add the same rules to mutiple selectors by using a , */
+ .lightcoral, .lavenderblush{
+ 	width:200px;
+ 	height: 200px;
+ }
