@@ -1,0 +1,56 @@
+.container{
+	width: 200px;
+	height: 200px;
+	background-color:lavenderblush ;
+	margin: 20px;
+	display: inline-block;
+}
+
+body{
+	/*solutions for removing scroll on an entire webpage*/
+	/*overflow-y: hidden;*/
+	font-family: monospace;
+}
+/* syntax to grab all the divs that are children of .container class on dic*/
+div.container > div, .sticky-child{
+	width: 75px;
+	height: 75px;
+	background-color: lavender;
+}
+.static-child{
+	/* this doesn't do anything it is the default */
+	position: static;
+}
+
+.reletive-child{
+	position: relative;
+}
+
+/*you write the rule twice or 
+
+.absolute-child{
+	position: absolute;
+	/*specifying the exact position using units from top and units from left*/
+	top: 100px;
+	left: 0px;
+}
+
+.down-under{
+	position: absolute;
+	top: 2000px;
+}
+
+.fixed-child{
+	position: fixed;
+}
+
+.sticky-child{
+	position: sticky;
+	top: 500px;
+	z-index: -999;
+
+}
+
+.big-container > img{
+	z-index: 999;
+}
