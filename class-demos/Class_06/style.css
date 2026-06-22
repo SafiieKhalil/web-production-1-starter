@@ -1,0 +1,52 @@
+body{
+	/*background: #B5BAFF;*/
+	background: linear-gradient(#9FA1FF, #D9F9DF);
+	height: 100%;
+	margin: 0;
+	padding-top: 10px;
+}
+
+p{
+	width: 30%;
+	/*one solution to add contrast between text/ backround*/
+	background-color: lightblue;
+	display: inline-block;
+	padding-left: 10px;
+}
+
+p.child{
+	/* transparent removes the inherited css bacround color*/
+	background-color: transparent;
+}
+
+div{
+	/*appends a transparent value to hex with the last 2 chars */
+	/* you could also use rgb()*/
+	background: #D9F9DF33;
+}
+div.transparent-block{
+	position: absolute;
+	top: 75px;
+	left: 300px;
+	width: 300px;
+	height: 50px;
+
+}
+
+.div-with-link{
+	text-align: center;
+	font-size: 20px;
+}
+a:visited {
+	text-decoration-color: none;
+	color:#D9F9DF;
+}
+a:hover{
+	background: lightblue;
+}
+
+a:link,a:visited{
+	color: lavenderblush;
+	/*text decoration can only be modified on the :link*/
+	text-decoration: none;
+}
