@@ -1,0 +1,50 @@
+/*standard site layouts*/
+body{
+	width: 100%;
+	height: 100%;
+	font-family: monospace;
+	font-size: 1rem;
+
+	background: lightskyblue;
+	margin: 0;
+	box-sizing: border-box;
+
+	display: flex;
+}
+
+nav{
+	background: lightblue;
+	width: 100%;
+
+	display: flex;
+	justify-content: space-around;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.content{
+	display: flex;
+	flex-direction: row;
+
+	flex-grow: 3;
+}
+
+aside{
+	flex-grow: 1;
+	background: violet;
+	min-width: 200px;
+}
+
+@media screen and (width<600px){
+	aside{
+		display: none;
+	}
+}
+main {
+	flex-grow: 3;
+	background: lightcoral;
+}
+
+footer{
+	background: lightpink;
+}

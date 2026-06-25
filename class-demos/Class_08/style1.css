@@ -1,0 +1,41 @@
+body{
+	/*rem ia a unit that is based off user preferences*/
+	/* this applies to zoom!*/
+	/* 1 rem ~=16px*/
+	font-size: 16px;
+}
+/* we can only use and test by adding viewport in html meta*/
+@media screen and (width<600px){
+	body{
+		font-size: 32px;
+	}
+}
+
+@media screen and (widht>=600px) and (width<992){
+	body{
+		font-size: 24px;
+	}
+}
+
+/*display flex only goes on parent container*/
+.parent-container{
+	display: flex;
+	flex-direction: column;
+	/* holy grail of centering items on a page */
+	justify-content: center;
+	align-items: center;
+	/*if i wanted to center on the entire page*/
+	height: 100%;
+	gap: 30px;
+}
+span {
+	background: lightskyblue;
+	color:white ;
+	text-align: center;
+}
+.smaller{
+	flex-grow: 1;
+}
+.bigger{
+	flex-grow: 4;
+}
