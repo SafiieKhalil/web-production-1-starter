@@ -1,216 +1,149 @@
-{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*{
+    margin:0;
+    box-sizing:border-box;
 }
 
-body {
-    font-family: 'Playfair Display', serif;
-    background-color: #DCD6CD; 
-    padding: 40px 15px;
-    display: flex;
-    justify-content: center;
+body{
+    font-family:Inter,sans-serif;
+    background:#efece6;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    min-height:100vh;
+    padding:40px;
 }
 
-.main-poster {
-    max-width: 950px;
-    width: 100%;
-    background-color: #FAF8F5;
+.poster{
+    background:white;
+    max-width:850px;
+    width:100%;
+    padding:50px;
+    position:relative;
+    overflow:hidden;
 }
 
-.hero-block {
-    text-align: center;
-    padding: 80px 40px;
-    background-image: linear-gradient(rgba(26, 54, 93, 0.65), rgba(26, 54, 93, 0.75)), 
-                      url('https://www.vladmuz.ru/travel_photos/sevastopol/fiolent/fiolent-01-big.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: #FFFFFF;
+.circle{ 
+    position:absolute;
+    width:280px; 
+    height:280px; 
+    border-radius:50%; 
+    background:#ffb48c;
+    top:120px; 
+    left:-70px;
+    z-index:1;
+} 
+
+
+.circle2{
+    position:absolute;
+    width:280px; 
+    height:280px; 
+    border-radius:50%; 
+    background:#ffb48c;
+    bottom:120px; 
+    right:-70px;
+    z-index:1;
 }
 
-.tamga-img {
-    width: 70px;
-    height: auto;
-    margin-bottom: 15px;
-    text-align: center; 
+.title{
+    position:relative;
+    z-index:2;
+    margin-bottom:40px;
 }
 
-.hero-block h1 {
-    font-size: 4.5rem;
-    font-weight: 700;
-    letter-spacing: 12px;
+.title h1{
+    font-size:7rem;
+    font-weight:900;
+    letter-spacing:10px;
 }
 
-.poster-subtitle {
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    color: #E2C9A1; 
-    margin-top: 5px;
+.title p{
+    margin-top:10px;
+    letter-spacing:4px;
+    color:#666;
 }
 
-.hero-desc {
-    max-width: 650px;
-    margin: 0 auto;
-    font-size: 1.2rem;
-    line-height: 1.7;
-    opacity: 0.95;
+.gallery{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:20px;
+    position:relative;
+    z-index:2;
 }
 
-.grid-section {
-    background-color: #1A365D;
-    color: #FFFFFF;
-    padding: 60px 30px;
-    text-align: center;
-    border-top: 3px solid #B8860B;
-    border-bottom: 3px solid #B8860B;
+.large{
+    grid-row:span 2;
 }
 
-.section-title {
-    font-size: 1.6rem;
-    letter-spacing: 6px;
-    color: #E2C9A1;
-    margin-bottom: 40px;
+.photo{
+    overflow:hidden;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    gap: 15px;
+.photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
 }
 
-.card {
-    background-color: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(226, 201, 161, 0.25);
-    padding: 20px 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: left;
+.info{
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+    margin-top:50px;
+    position:relative;
+    z-index:2;
+
 }
 
-.card-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 12px;
+.info div{
+    flex:1;
 }
 
-.card-num {
-    color: #E2C9A1;
-    font-size: 1.2rem;
-    font-weight: bold;
+.info h2{
+    margin-bottom:15px;
+    font-size:1.2rem;
 }
 
-.card h3 {
-    color: #E2C9A1;
-    font-size: 1.1rem;
-    letter-spacing: 2px;
+.info p{
+    line-height:1.7;
+    color:#666;
 }
 
-.card p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    opacity: 0.85;
-    margin-bottom: 25px;
+@media(max-width:768px){
+
+.poster{
+        padding:30px;
 }
 
-.card-image {
-    width: 100%;
-    height: 160px;
-    overflow: hidden;
-    border: 1px solid #E2C9A1;
+.circle{
+    width:180px;
+    height:180px;
+    top:60px;
+    left:-60px;
 }
 
-.card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.circle2{
+    width:180px;
+    height:180px;
+    bottom:-50px;
+    right:-50px;
 }
 
-
-
-.culture-block {
-    padding: 80px 40px;
-    background-image: linear-gradient(rgba(218, 212, 202, 0.4), rgba(218, 212, 202, 0.4)), 
-                      url('https://www.krym4you.com/files/catalog/514/gallery/big/lastochkino-3_1450367932_1466168376.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; 
-    display: flex;
-    justify-content: center;
+.gallery{
+grid-template-columns:1fr;
 }
 
-.culture-content {
-    max-width: 650px;
-    text-align: center;
-    border: 1px dashed #B8860B;
-    padding: 40px 30px;
-    background-color: rgba(250, 248, 245, 0.95); 
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+.large{
+grid-row:auto;
 }
 
-.culture-content h2 {
-    color: #1A365D;
-    font-size: 2.2rem;
-    letter-spacing: 2px;
+.info{
+flex-direction:column;
 }
 
-.culture-content p {
-    font-size: 1.15rem;
-    line-height: 1.7;
-    color: #2C2A29;
-    font-style: italic;
+.title h1{
+font-size:3rem;
+letter-spacing:4px;
 }
-
-footer {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #FAF8F5;
-    border-top: 1px solid #E6E1DA;
-}
-
-.tamga-small {
-    width: 30px;
-    height: auto;
-    margin-bottom: 10px;
-    opacity: 0.8;
-}
-
-footer p {
-    font-size: 1rem;
-    color: #8C7A6B;
-}
-
-@media (max-width: 768px) {
-    body {
-        padding: 10px 5px;
-    }
-
-    .main-poster {
-        border: 4px double #B8860B;
-    }
-
-    .hero-block {
-        padding: 50px 15px;
-    }
-
-    .hero-block h1 {
-        font-size: 2.8rem;
-        letter-spacing: 4px;
-    }
-
-    .grid-container {
-        grid-template-columns: 100%;
-        gap: 25px;
-    }
-
-    .card-image {
-        height: 200px;
-    }
-
-    .culture-block {
-        padding: 50px 15px;
-    }
 }
